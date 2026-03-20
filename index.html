@@ -191,15 +191,18 @@
     }
 
     .helmet {
-      width: 62px;
-      height: 62px;
+      width: 72px;
+      height: 72px;
       border-radius: 18px;
       margin: 0 auto;
       display: grid;
       place-items: center;
-      font-size: 1.6rem;
+      padding: 0 8px;
+      font-size: 1.45rem;
+      line-height: 1;
       font-weight: 800;
       color: #04101d;
+      text-align: center;
     }
 
     .helmet.home {
@@ -209,7 +212,12 @@
     .helmet.away {
       background: linear-gradient(135deg, var(--accent-2), #dcffd1);
     }
-
+    
+    .team:last-child .helmet {
+      font-size: 1rem;
+      letter-spacing: -0.08em;
+      font-weight: 900;
+    }
     .team-name {
       font-size: 1rem;
       font-weight: 800;
