@@ -75,8 +75,8 @@
 
     .hero-content {
       display: grid;
-      grid-template-columns: 1.3fr 0.7fr;
-      gap: 28px;
+      grid-template-columns: 1.28fr 0.72fr;
+      gap: 32px;
       align-items: center;
       margin-top: 22px;
     }
@@ -139,28 +139,31 @@
     }
 
     .hero-panel {
-  background: linear-gradient(180deg, rgba(20,31,56,0.82), rgba(12,21,37,0.86));
-  border: 1px solid rgba(255,255,255,0.07);
-  border-radius: 28px;
-  padding: 24px;
-  box-shadow: 0 18px 40px rgba(0,0,0,0.22);
-  position: relative;
-  overflow: hidden;
-  backdrop-filter: blur(8px);
-}
+      width: 100%;
+      max-width: 440px;
+      justify-self: end;
+      background: linear-gradient(180deg, rgba(20,31,56,0.82), rgba(12,21,37,0.86));
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 28px;
+      padding: 24px;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.22);
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(8px);
+    }
 
     .hero-panel::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(49,196,255,0.08),
-    transparent 42%,
-    rgba(115,255,180,0.05)
-  );
-  pointer-events: none;
-}
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(49,196,255,0.08),
+        transparent 42%,
+        rgba(115,255,180,0.05)
+      );
+      pointer-events: none;
+    }
 
     .panel-title {
       font-size: 0.9rem;
@@ -183,79 +186,82 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 12px;
     }
-.versus {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
-  align-items: start;
-  gap: 28px;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 20px;
-  padding: 26px 22px;
-}
+    .versus {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+      align-items: start;
+      gap: 32px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
+      padding: 28px 24px;
+    }
 
-.team {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  text-align: center;
-  min-width: 0;
-}
+    .team {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: center;
+      min-width: 0;
+    }
 
-.helmet {
-  width: 108px;
-  height: 108px;
-  border-radius: 28px;
-  margin: 0 auto 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  flex-shrink: 0;
-}
-.helmet.home,
-.helmet.away {
-  background: transparent;
-}
-.helmet img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-}
+    .helmet {
+      width: 108px;
+      height: 108px;
+      border-radius: 28px;
+      margin: 0 auto 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .helmet.home,
+    .helmet.away {
+      background: transparent;
+    }
+
+    .helmet img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
     .team:first-child .helmet img {
-  transform: scale(1.04);
-}
+      transform: scale(1.08);
+    }
 
-.team:last-child .helmet img {
-  transform: scale(1);
-}
+    .team:last-child .helmet img {
+      transform: scale(1);
+    }
 
-.team-name {
-  width: 100%;
-  max-width: 240px;
-  min-height: 96px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  text-align: center;
-  font-size: 1rem;
-  line-height: 1.22;
-  font-weight: 800;
-  text-wrap: balance;
-}
+    .team-name {
+      width: 100%;
+      max-width: 170px;
+      min-height: 92px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      text-align: center;
+      font-size: 0.98rem;
+      line-height: 1.18;
+      font-weight: 800;
+      text-wrap: balance;
+    }
 
-.vs {
-  align-self: center;
-  justify-self: center;
-  font-size: 1.05rem;
-  line-height: 1;
-  color: var(--muted);
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  margin-top: 34px;
-}
+    .vs {
+      align-self: center;
+      justify-self: center;
+      font-size: 1.05rem;
+      line-height: 1;
+      color: var(--muted);
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      margin-top: 34px;
+    }
 
     
     .info-box {
@@ -505,7 +511,22 @@
       }
 
       .hero-content {
-        gap: 18px;
+        gap: 22px;
+      }
+
+      .hero-panel {
+        max-width: none;
+      }
+
+      .versus {
+        gap: 22px;
+        padding: 24px 20px;
+      }
+
+      .team-name {
+        max-width: 150px;
+        min-height: 84px;
+        font-size: 0.94rem;
       }
     }
 
@@ -518,6 +539,34 @@
       .players-grid,
       .info-grid {
         grid-template-columns: 1fr;
+      }
+
+      .hero-panel {
+        max-width: 100%;
+      }
+
+      .versus {
+        gap: 14px;
+        padding: 20px 16px;
+      }
+
+      .helmet {
+        width: 88px;
+        height: 88px;
+        border-radius: 24px;
+        margin-bottom: 14px;
+      }
+
+      .team-name {
+        max-width: 120px;
+        min-height: 74px;
+        font-size: 0.88rem;
+        line-height: 1.15;
+      }
+
+      .vs {
+        font-size: 0.95rem;
+        margin-top: 28px;
       }
 
       .section-head {
